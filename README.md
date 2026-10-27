@@ -8,7 +8,7 @@ A Power BI portfolio project by **Jackson Josephat Kavishe**, developed while le
 
 ## Why this project
 
-A country's total GDP, GDP per capita and population answer different questions. Comparing them together helps readers distinguish a large economy from high output per person, see how population has changed, and investigate periods of stronger or weaker growth.
+A country's total GDP, GDP per capita, and population answer different questions. Comparing them together helps one distinguish a large economy from high output per person, see how population has changed, and investigate periods of stronger or weaker growth.
 
 The report gives students, researchers and analysts a compact starting point for country comparisons and country-level exploration. Its purpose is to make those questions easy to investigate using a familiar table and a focused detail page.
 
