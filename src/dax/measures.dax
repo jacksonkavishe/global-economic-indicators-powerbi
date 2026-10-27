@@ -1,0 +1,68 @@
+// The 11 measure definitions extracted from the published PBIX.
+// Reference source: create or edit each measure separately in Power BI Desktop.
+
+SumIndicatorValue =
+SUM(Indicators[IndicatorValue])
+
+Population =
+CALCULATE([SumIndicatorValue],
+        Indicators[Series Code]="SP.POP.TOTL"
+)
+
+GDP =
+CALCULATE( [SumIndicatorValue],
+         Indicators[Series Code] = "NY.GDP.MKTP.KD"
+ )
+
+GDP per Capita =
+DIVIDE([GDP], [Population],0)
+
+2025 GDP =
+CALCULATE([GDP],
+        Indicators[Year] = 2025)
+
+2025 Population =
+CALCULATE([Population],
+   Indicators[Year] = 2025 )
+
+2025 GDP per Capita =
+DIVIDE([2025 GDP], [2025 Population], 0)
+
+2025 Population Density =
+DIVIDE([2025 Population],SUM(Countries[Land Area]),0)
+
+GDP Annual Growth % =
+/*
+Description:Calculate the annual growth rate of a given country
+by comparing the current year's GDP value to the previous year's GDP value,
+find the difference, and using that to calculate 
+percentage growth from one year to the next
+
+Change tracking:
+OCT 27, 2026: Version 1
+OCT 27, 2026: Jackson added comments
+*/
+
+// get the current year analysis
+
+var CurrentYear = SELECTEDVALUE(Indicators[Year])
+
+// get GDP value of current year
+var CurrentYearGDP = CALCULATE([GDP],Indicators[Year] = CurrentYear)
+
+// get the GDP of previous year
+var PrevYearGDP = CALCULATE([GDP], Indicators[Year] = CurrentYear - 1)
+
+// calculate diff between current and previour year GDP
+var diff = CurrentYearGDP - PrevYearGDP
+
+// calculate the annual growth rate
+var GrowthRate = DIVIDE(diff, PrevYearGDP, 0)
+RETURN
+GrowthRate
+
+Selected Country =
+SELECTEDVALUE(Countries[name])
+
+TEMPERATURE =
+SUM('Year'[TempC])

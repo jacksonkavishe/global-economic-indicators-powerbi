@@ -1,0 +1,50 @@
+[
+  {
+    "query_name": "Source-indicators",
+    "path": "src/power-query/Source-indicators.pq"
+  },
+  {
+    "query_name": "Source-Countries",
+    "path": "src/power-query/Source-Countries.pq"
+  },
+  {
+    "query_name": "Land Area by Country (2020)",
+    "path": "src/power-query/Land-Area-by-Country-2020.pq"
+  },
+  {
+    "query_name": "Source_metadata_population",
+    "path": "src/power-query/Source_metadata_population.pq"
+  },
+  {
+    "query_name": "Source_metadata_GDP",
+    "path": "src/power-query/Source_metadata_GDP.pq"
+  },
+  {
+    "query_name": "Source_metadata_GDP-per-capita",
+    "path": "src/power-query/Source_metadata_GDP-per-capita.pq"
+  },
+  {
+    "query_name": "nasa-global-temp-data",
+    "path": "src/power-query/nasa-global-temp-data.pq"
+  },
+  {
+    "query_name": "Measures (2)",
+    "path": "src/power-query/Measures-2.pq"
+  },
+  {
+    "query_name": "Indicators",
+    "path": "src/power-query/Indicators.pq"
+  },
+  {
+    "query_name": "Countries",
+    "path": "src/power-query/Countries.pq"
+  },
+  {
+    "query_name": "Metadata",
+    "path": "src/power-query/Metadata.pq"
+  },
+  {
+    "query_name": "Year",
+    "path": "src/power-query/Year.pq"
+  }
+]

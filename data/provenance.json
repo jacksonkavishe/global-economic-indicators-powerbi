@@ -1,0 +1,106 @@
+{
+  "project": "Global Economic Indicators",
+  "author": "Jackson Josephat Kavishe",
+  "publication_prepared_at_utc": "2026-10-27T09:45:26.570415+00:00",
+  "reporting_year": 2025,
+  "source_snapshot_date": "2026-10-27",
+  "retrieved_at_utc": "2026-10-27T07:18:17.200286+00:00",
+  "world_bank_country_url": "https://api.worldbank.org/v2/country/all?format=json&per_page=500",
+  "world_bank_sources": [
+    {
+      "name": "gdp",
+      "series_code": "NY.GDP.MKTP.KD",
+      "lastupdated": "2026-10-08",
+      "nonempty_rows_excluding_aggregates": 9973,
+      "latest_year": 2025,
+      "economies_with_2025_data": 186,
+      "url": "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.KD?format=json&source=2&date=1973:2026&per_page=20000"
+    },
+    {
+      "name": "population",
+      "series_code": "SP.POP.TOTL",
+      "lastupdated": "2026-10-08",
+      "nonempty_rows_excluding_aggregates": 11484,
+      "latest_year": 2025,
+      "economies_with_2025_data": 217,
+      "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&source=2&date=1973:2026&per_page=20000"
+    },
+    {
+      "name": "land",
+      "series_code": "AG.LND.TOTL.K2",
+      "lastupdated": "2026-10-08",
+      "nonempty_rows_excluding_aggregates": 10403,
+      "latest_year": 2024,
+      "economies_with_2025_data": 0,
+      "url": "https://api.worldbank.org/v2/country/all/indicator/AG.LND.TOTL.K2?format=json&source=2&date=1973:2026&per_page=20000"
+    }
+  ],
+  "temperature": {
+    "url": "https://data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv",
+    "field": "J-D",
+    "unit": "degrees Celsius anomaly",
+    "baseline": "1951-1980",
+    "first_year": 1973,
+    "last_complete_year": 2025,
+    "incomplete_2026_excluded": true
+  },
+  "data_format_note": "The CSVs are normalized, country-level source snapshots supplied with the project, not untouched JSON API responses. The source retrieval range extended to 2026, but non-empty GDP/population observations end in 2025.",
+  "published_model": {
+    "tables": 5,
+    "measures": 11,
+    "fact_rows": 21457,
+    "country_dimension_rows": 216,
+    "year_rows": 53,
+    "metadata_rows": 45,
+    "first_year": 1973,
+    "last_year": 2025,
+    "source_economies": 217,
+    "mapped_2025_gdp_economies": 185,
+    "source_2025_gdp_economies": 186,
+    "unmatched_country_codes": [
+      "XKX"
+    ],
+    "land_area_vintage_used_for_density": 2020,
+    "relationships": [
+      {
+        "FromTableName": "Indicators",
+        "FromColumnName": "Country Code",
+        "ToTableName": "Countries",
+        "ToColumnName": "id",
+        "IsActive": 1,
+        "Cardinality": "M:1",
+        "CrossFilteringBehavior": "Single",
+        "FromKeyCount": 220,
+        "ToKeyCount": null,
+        "RelyOnReferentialIntegrity": 0
+      },
+      {
+        "FromTableName": "Indicators",
+        "FromColumnName": "Year",
+        "ToTableName": "Year",
+        "ToColumnName": "Year",
+        "IsActive": 1,
+        "Cardinality": "M:1",
+        "CrossFilteringBehavior": "Single",
+        "FromKeyCount": 56,
+        "ToKeyCount": null,
+        "RelyOnReferentialIntegrity": 0
+      }
+    ]
+  },
+  "checks": {
+    "duplicate_fact_keys": 0,
+    "empty_or_null_fact_values": 0,
+    "report_binary_modified": false,
+    "desktop_runtime_test_by_publisher": false,
+    "screenshots_supplied_by_author": true
+  },
+  "sha256": {
+    "data/indicators.csv": "6d27c381641eaf6f3686525df07a4643cdc928cf6cc13be26afc6523d5d05420",
+    "data/annual-temperature.csv": "04d845dfaca0f2d7209076c2af436a3405f7fc5bf7f02c3e64b99d9c8dc4926e",
+    "data/countries.csv": "93b38ad3e7c199eca80e2d4e6706f8ba14eec5ad81757121d4e75814a367050c",
+    "report/Global-Economic-Indicators.pbix": "3676dfa3528df38fa1f8bd2ae775c9105e2144351185da43fb1e28cc2be58e7a",
+    "images/country-detail-tanzania.png": "545a327aeda9117f0394715048a2cccea2eb96c318acea769ac5022efae80cdc",
+    "images/overview.png": "891180ec22524075862259aa0067027aaab29ccac166e4ea893537fe3b132df6"
+  }
+}
